@@ -1,0 +1,11 @@
+{
+    "APP": {
+        "HOME": {
+            "TITLE": "Administration and Management Console",
+            "EMPTY": {
+                "TITLE": "Access for admins only",
+                "SUBTITLE": "Log in as admin to access admin tools"
+            }
+        }
+    }
+}

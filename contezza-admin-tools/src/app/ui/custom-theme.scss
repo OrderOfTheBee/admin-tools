@@ -1,0 +1,40 @@
+$mat-theme-ignore-duplication-warnings: true;
+
+@import '~@angular/material/theming';
+
+@import 'contezza-core-ui';
+@import 'colors';
+
+@import '../../../../content-ce/app/src/app/ui/overrides/adf-style-fixes.theme';
+
+@include mat-core();
+
+$custom-theme-primary: mat-palette($primary-scale);
+$custom-theme-accent: mat-palette($accent-scale);
+$custom-theme-warn: mat-palette($warning-scale);
+
+$custom-theme: mat-light-theme(
+    (
+        color: (
+            primary: $custom-theme-primary,
+            accent: $custom-theme-accent,
+            warn: $custom-theme-warn,
+        ),
+    )
+);
+
+@mixin custom-theme($theme) {
+    @include angular-material-theme($theme);
+    @include adf-style-fixes($theme);
+
+    @include app-style-fixes();
+    @include adf-dialog-theme();
+    @include app-header-theme();
+    @include app-sidenav-theme();
+}
+
+:root {
+    @include custom-theme($custom-theme);
+    @include theme-color-variables($custom-theme);
+    @include light-theme-variables($custom-theme);
+}

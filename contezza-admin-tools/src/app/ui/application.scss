@@ -1,0 +1,31 @@
+@import 'mixins';
+@import 'theme';
+
+html,
+body {
+    @include flex-column;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+    color: var(--theme-title-color);
+    margin: 0;
+
+    & > main {
+        @include flex-column;
+    }
+}
+
+[dir='rtl'] .mat-icon {
+    transform: scale(-1, 1);
+}
+
+// todo: move this to corresponding component theme files
+.adf-container-full-width {
+    overflow: hidden;
+}
+app-root,
+app-about,
+adf-layout-container,
+aca-search-results,
+ng-component {
+    @include flex-column;
+}

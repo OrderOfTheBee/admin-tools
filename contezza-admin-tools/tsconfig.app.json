@@ -1,0 +1,25 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../out-tsc/contezza-admin-tools",
+        "types": ["jasmine", "node"]
+    },
+    "files": ["../content-ce/app/src/main.ts", "../content-ce/app/src/polyfills.ts"],
+    "include": ["../content-ce/app/src", "./src/app"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "config",
+        "./overrides/*",
+        "./src/app/**/*.spec.ts",
+        "../content-ce/**/*.spec.ts",
+        "../content-ce/**/*.mock.ts",
+        "../content-ce/app/src/test.ts",
+        "../content-ce/app/src/app/testing/*",
+        "../content-ce/app/src/environments/*",
+        "../content-ce/app/src/app/components/trashcan/*",
+        "../content-ce/app/src/app/components/shared-link-view/*",
+        "../content-ce/app/src/app/components/viewer/*",
+        "./src/app/extensions.module.ts"
+    ]
+}

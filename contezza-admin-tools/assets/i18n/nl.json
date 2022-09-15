@@ -1,0 +1,11 @@
+{
+    "APP": {
+        "HOME": {
+            "TITLE" : "Administratie en Management Console",
+            "EMPTY" : {
+                "TITLE" : "Toegang uitsluitend voor admins",
+                "SUBTITLE" : "Log in als admin om toegang te krijgen tot de admin tools"
+            }
+        }
+    }
+}

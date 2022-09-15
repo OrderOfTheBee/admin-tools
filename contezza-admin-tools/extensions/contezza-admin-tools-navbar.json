@@ -1,0 +1,97 @@
+{
+    "$id": "app.contezza-admin-tools.navbar",
+    "$version": "@@project.version@@",
+    "$name": "Contezza Admin Tools App Navbar",
+    "$vendor": "Contezza BV",
+
+    "features": {
+        "navbar": [
+            {
+                "id": "app.navbar.primary",
+                "order": 100,
+                "rules": {
+                    "visible": "false"
+                }
+            },
+            {
+                "id": "app.navbar.secondary",
+                "order": 200,
+                "rules": {
+                    "visible": "false"
+                }
+            },
+            {
+                "id": "app.navbar.admin.console",
+                "order": 300,
+                "items": [
+                    {
+                        "id": "app.admin-console.permissions",
+                        "order": 100,
+                        "icon": "people",
+                        "title": "APP.PERMISSIONS.TITLE",
+                        "description": "APP.PERMISSIONS.DESCRIPTION",
+                        "route": "manage-permissions",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    },
+                    {
+                        "id": "app.admin-console.folder-templates",
+                        "order": 200,
+                        "icon": "svg:file-tree",
+                        "title": "APP.FOLDER_TEMPLATES.TITLE",
+                        "description": "APP.FOLDER_TEMPLATES.DESCRIPTION",
+                        "route": "manage-folder-templates",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    },
+                    {
+                        "id": "app.admin-console.zaak-types",
+                        "order": 300,
+                        "icon": "settings",
+                        "title": "APP.ZAAK_TYPES.TITLE",
+                        "description": "APP.ZAAK_TYPES.DESCRIPTION",
+                        "route": "manage-zaak-types",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    },
+                    {
+                        "id": "app.admin-console.remote-connections",
+                        "order": 400,
+                        "icon": "compare_arrows",
+                        "title": "APP.REMOTE_CONNECTIONS.TITLE",
+                        "description": "APP.REMOTE_CONNECTIONS.DESCRIPTION",
+                        "route": "manage-remote-connections",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    },
+                    {
+                        "id": "app.admin-console.js-console",
+                        "order": 500,
+                        "icon": "svg:console",
+                        "title": "APP.JS_CONSOLE.NAVBAR.TITLE",
+                        "description": "APP.JS_CONSOLE.NAVBAR.DESCRIPTION",
+                        "route": "javascript-console",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    },
+                    {
+                        "id": "app.admin-console.node-browser",
+                        "order": 600,
+                        "icon": "svg:travel_explore",
+                        "title": "APP.NODE_BROWSER.NAVBAR.TITLE",
+                        "description": "APP.NODE_BROWSER.NAVBAR.DESCRIPTION",
+                        "route": "node-browser",
+                        "rules": {
+                            "visible": "app.user.isAdmin"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+@import '~@alfresco/adf-core/theming';
+
+@import './custom-theme.scss';
+
+@include mat-core($alfresco-typography);
+
+// fixes [ACA-2069]
+.mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) {
+    .mat-slide-toggle-thumb,
+    .mat-slide-toggle-ripple .mat-ripple-element {
+        background-color: var(--theme-primary-color);
+    }
+    .mat-slide-toggle-bar {
+        background-color: var(--theme-primary-lighter-color);
+    }
+}
+
+.adf-userinfo-pic {
+    color: var(--theme-primary-color-default-contrast);
+}
+
+@include custom-theme($custom-theme);

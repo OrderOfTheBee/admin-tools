@@ -1,0 +1,292 @@
+{
+    "contezza-admin-tools": {
+        "root": "apps/contezza-admin-tools/",
+        "sourceRoot": "apps/contezza-admin-tools/src",
+        "projectType": "application",
+        "prefix": "app",
+        "schematics": {},
+        "architect": {
+            "build": {
+                "builder": "@angular-devkit/build-angular:browser",
+                "options": {
+                    "aot": true,
+                    "allowedCommonJsDependencies": [
+                        "minimatch",
+                        "minimatch-browser",
+                        "moment-es6",
+                        "superagent",
+                        "event-emitter",
+                        "brace-expansion",
+                        "d",
+                        "chart.js",
+                        "proj4leaflet",
+                        "util",
+                        "crypto-js"
+                    ],
+                    "outputPath": "dist/contezza-admin-tools",
+                    "index": "apps/contezza-admin-tools/src/index.html",
+                    "main": "apps/content-ce/app/src/main.ts",
+                    "polyfills": "apps/content-ce/app/src/polyfills.ts",
+                    "stylePreprocessorOptions": {
+                        "includePaths": ["apps/contezza-admin-tools/src/app/ui", "libs/core/common/styles"]
+                    },
+                    "tsConfig": "apps/contezza-admin-tools/tsconfig.app.json",
+                    "assets": [
+                        {
+                            "input": "apps/content-ce/app/src/assets",
+                            "output": "/assets",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "apps/content-ce/app/src",
+                            "output": "/",
+                            "glob": "app.config.json"
+                        },
+                        {
+                            "input": "apps/content-ce/app/src",
+                            "output": "/",
+                            "glob": "app.config.prod.json"
+                        },
+                        {
+                            "input": "apps/content-ce/app/src",
+                            "output": "/",
+                            "glob": "app.config.test.json"
+                        },
+                        {
+                            "input": "apps/contezza-admin-tools/assets/images",
+                            "output": "/",
+                            "glob": "favicon.png"
+                        },
+                        {
+                            "input": "apps/content-ce/app/src",
+                            "output": "/",
+                            "glob": "versions.json"
+                        },
+                        {
+                            "input": ".",
+                            "output": "/assets",
+                            "glob": "extension.schema.json"
+                        },
+                        {
+                            "input": "apps/content-ce",
+                            "output": "/",
+                            "glob": "LICENSE"
+                        },
+                        {
+                            "input": "apps/content-ce/projects/adf-office-services-ext/assets",
+                            "output": "/assets/adf-office-services-ext",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "apps/content-ce/projects/adf-office-services-ext/assets",
+                            "output": "/assets/plugins",
+                            "glob": "aos.plugin.json"
+                        },
+                        {
+                            "input": "node_modules/@alfresco/adf-process-services/bundles/assets",
+                            "output": "/assets",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "node_modules/@alfresco/adf-core/prebuilt-themes",
+                            "output": "/assets/prebuilt-themes",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "node_modules/@alfresco/adf-core/bundles/assets",
+                            "output": "/assets",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "node_modules/@alfresco/adf-content-services/bundles/assets",
+                            "output": "/assets",
+                            "glob": "**/*"
+                        },
+                        {
+                            "input": "node_modules/pdfjs-dist/build",
+                            "output": "/",
+                            "glob": "pdf.worker.min.js"
+                        },
+                        {
+                            "input": "apps/content-ce/projects/aca-about/assets",
+                            "output": "/assets/plugins",
+                            "glob": "about.plugin.json"
+                        },
+                        {
+                            "input": "apps/content-ce/projects/aca-settings/assets",
+                            "output": "/assets/plugins",
+                            "glob": "settings.plugin.json"
+                        },
+                        {
+                            "input": "apps/contezza-admin-tools/extensions",
+                            "output": "/assets/plugins",
+                            "glob": "*.json"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "apps/contezza-admin-tools/assets",
+                            "output": "./assets/contezza-admin-tools"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/core/common/assets",
+                            "output": "./assets/contezza-core"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/permissions/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/permissions/assets",
+                            "output": "./assets/mgmt/permissions"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/zaak-types/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/zaak-types/assets",
+                            "output": "./assets/mgmt/zaak-types"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/folder-templates/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/folder-templates/assets",
+                            "output": "./assets/mgmt/folder-templates"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/remote-connections/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/remote-connections/assets",
+                            "output": "./assets/mgmt/remote-connections"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/modules/login/assets",
+                            "output": "./assets/login"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/core/profile/assets",
+                            "output": "./assets/contezza-profile"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/core/profile/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/js-console/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/js-console/assets",
+                            "output": "./assets/mgmt/js-console"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "node_modules/ngx-monaco-editor/assets/monaco",
+                            "output": "/assets/monaco/"
+                        },
+                        {
+                            "glob": "*.json",
+                            "input": "libs/mgmt/node-browser/extensions",
+                            "output": "./assets/plugins"
+                        },
+                        {
+                            "glob": "**/*",
+                            "input": "libs/mgmt/node-browser/assets",
+                            "output": "./assets/mgmt/node-browser"
+                        }
+                    ],
+                    "styles": [
+                        "apps/content-ce/app/src/assets/fonts/material-icons/material-icons.css",
+                        "apps/content-ce/app/src/assets/fonts/muli/muli.css",
+                        "apps/contezza-admin-tools/src/styles.scss",
+                        "node_modules/cropperjs/dist/cropper.min.css"
+                    ],
+                    "scripts": [
+                        "node_modules/pdfjs-dist/build/pdf.js",
+                        "node_modules/pdfjs-dist/web/pdf_viewer.js",
+                        "node_modules/raphael/raphael.min.js",
+                        "node_modules/moment/min/moment.min.js"
+                    ],
+                    "fileReplacements": [{ "replace": "apps/content-ce/app/src/app/extensions.module.ts", "with": "apps/contezza-admin-tools/src/app/extensions.module.ts" }]
+                },
+                "configurations": {
+                    "production": {
+                        "optimization": true,
+                        "outputHashing": "all",
+                        "sourceMap": false,
+                        "extractCss": true,
+                        "namedChunks": false,
+                        "aot": true,
+                        "extractLicenses": true,
+                        "vendorChunk": true,
+                        "buildOptimizer": true,
+                        "verbose": false,
+                        "budgets": [
+                            {
+                                "type": "bundle",
+                                "name": "main",
+                                "maximumWarning": "2mb",
+                                "maximumError": "5mb"
+                            },
+                            {
+                                "type": "bundle",
+                                "name": "vendor",
+                                "maximumWarning": "10mb",
+                                "maximumError": "15mb"
+                            },
+                            {
+                                "type": "anyComponentStyle",
+                                "maximumWarning": "6kb"
+                            }
+                        ],
+                        "fileReplacements": [
+                            { "replace": "apps/content-ce/app/src/environments/environment.ts", "with": "apps/content-ce/app/src/environments/environment.prod.ts" },
+                            { "replace": "apps/content-ce/app/src/app/extensions.module.ts", "with": "apps/contezza-admin-tools/src/app/extensions.module.ts" }
+                        ]
+                    }
+                }
+            },
+            "serve": {
+                "builder": "@angular-devkit/build-angular:dev-server",
+                "options": {
+                    "browserTarget": "contezza-admin-tools:build",
+                    "port": 4200,
+                    "open": true,
+                    "proxyConfig": "apps/contezza-admin-tools/proxy.conf.js"
+                },
+                "configurations": {
+                    "production": {
+                        "browserTarget": "contezza-admin-tools:build:production"
+                    }
+                }
+            },
+            "lint": {
+                "builder": "@angular-eslint/builder:lint",
+                "options": {
+                    "lintFilePatterns": ["apps/contezza-admin-tools/**/*.ts", "apps/contezza-admin-tools/**/*.html"],
+                    "cache": true,
+                    "cacheLocation": ".eslintcache",
+                    "ignorePath": ".eslintignore"
+                }
+            }
+        }
+    }
+}

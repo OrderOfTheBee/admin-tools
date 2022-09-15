@@ -1,0 +1,14 @@
+{
+    "$id": "app.contezza-admin-tools.routes",
+    "$version": "@@project.version@@",
+    "$name": "Contezza Admin Tools App Routes",
+    "$vendor": "Contezza BV",
+
+    "routes": [
+        {
+            "path": "admin-tools",
+            "parentRoute": "",
+            "component": "app.admin-tools-home.component"
+        }
+    ]
+}

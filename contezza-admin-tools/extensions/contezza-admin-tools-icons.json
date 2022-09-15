@@ -1,0 +1,15 @@
+{
+    "$id": "app.contezza-admin-tools.icons",
+    "$version": "@@project.version@@",
+    "$name": "Contezza Admin Tools App Icons",
+    "$vendor": "Contezza BV",
+
+    "features": {
+        "icons": [
+            {
+                "id": "svg:file-tree",
+                "value": "./assets/contezza-admin-tools/images/file-tree.svg"
+            }
+        ]
+    }
+}

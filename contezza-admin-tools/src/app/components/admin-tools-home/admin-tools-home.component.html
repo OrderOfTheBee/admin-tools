@@ -1,0 +1,22 @@
+<aca-page-layout>
+    <aca-page-layout-header>
+        <span class='admin-tools-home-title'> {{ 'APP.HOME.TITLE' | translate }} </span>
+    </aca-page-layout-header>
+    <aca-page-layout-content>
+        <ng-container *ngIf='(isAdmin$ | async); else noAdminTemplate'>
+            <div class='admin-tools-home-content'>
+                <contezza-app-info></contezza-app-info>
+            </div>
+        </ng-container>
+        <ng-template #noAdminTemplate>
+            <adf-custom-empty-content-template class='no-admin-empty-content-template'>
+                <adf-empty-content
+                    icon="visibility_off"
+                    title="{{ 'APP.HOME.EMPTY.TITLE' | translate }}"
+                    subtitle="{{ 'APP.HOME.EMPTY.SUBTITLE' | translate }}">
+                </adf-empty-content>
+            </adf-custom-empty-content-template>
+        </ng-template>
+
+    </aca-page-layout-content>
+</aca-page-layout>

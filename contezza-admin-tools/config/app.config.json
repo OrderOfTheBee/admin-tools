@@ -1,0 +1,149 @@
+{
+    "ecmHost": "{protocol}//{hostname}{:port}",
+    "aosHost": "{protocol}//{hostname}{:port}/alfresco/aos",
+    "baseShareUrl": "{protocol}//{hostname}{:port}/#/preview/s",
+    "providers": "ECM",
+    "authType": "BASIC",
+    "loginRoute": "login",
+    "plugins": {
+        "aosPlugin": true,
+        "contentService": true
+    },
+    "oauth2": {
+        "host": "http://localhost:4200/auth/realms/alfresco",
+        "clientId": "alfresco",
+        "scope": "openid",
+        "secret": "",
+        "implicitFlow": true,
+        "silentLogin": true,
+        "publicUrls": ["**/preview/s/*", "**/settings", "**/blank"],
+        "redirectSilentIframeUri": "{protocol}//{hostname}{:port}/assets/silent-refresh.html",
+        "redirectUri": "/",
+        "redirectUriLogout": "/logout"
+    },
+    "locale": "nl",
+    "landingPage": "/admin-tools",
+    "application": {
+        "storagePrefix": "contezza_admin_tools",
+        "name": "Admin Tools",
+        "version": "@@project.version@@",
+        "logo": "assets/contezza-admin-tools/images/logo-icon.svg",
+        "headerImagePath": "",
+        "copyright": "APP.COPYRIGHT"
+    },
+    "contezza": {
+        "login": {
+            "successRoute": "/admin-tools",
+            "logoImageUrl": "./assets/contezza-admin-tools/images/contezza_logo.png",
+            "backgroundImageUrl": "./assets/contezza-admin-tools/images/contezza-homepage.png",
+            "2fa": false
+        }
+    },
+    "admin-tools": ["permissions", "folder-templates", "zaak-types"],
+    "permissions-manager": {
+        "tabs": ["sites", "groups", "users"],
+        "exclude-sites": [],
+        "exclude-groups": []
+    },
+    "viewer.maxRetries": 1,
+    "sharedLinkDateTimePickerType": "date",
+    "headerColor": "#ffffff",
+    "headerTextColor": "#000000",
+    "customCssPath": "",
+    "webFontPath": "",
+    "pagination": {
+        "size": 25,
+        "supportedPageSizes": [25, 50, 100]
+    },
+    "files": {
+        "excluded": [".DS_Store", "desktop.ini", "Thumbs.db", ".git"],
+        "match-options": {
+            "nocase": true
+        }
+    },
+    "dateValues": {
+        "defaultDateFormat": "mediumDate",
+        "defaultDateTimeFormat": "MMM d, y, h:mm",
+        "defaultLocale": "nl"
+    },
+    "adf-version-manager": {
+        "allowComments": true,
+        "allowDownload": true
+    },
+    "sideNav": {
+        "preserveState": true,
+        "expandedSidenav": false
+    },
+    "languages": [
+        {
+            "key": "en",
+            "label": "English"
+        },
+        {
+            "key": "nl",
+            "label": "Nederlands"
+        }
+    ],
+    "content-metadata": {
+        "presets": {
+            "custom": [
+                {
+                    "includeAll": true,
+                    "exclude": [
+                        "rn:renditioned",
+                        "cm:versionable",
+                        "cm:auditable",
+                        "cm:thumbnailModification",
+                        "cm:content",
+                        "cm:author",
+                        "cm:titled",
+                        "cm:generalclassifiable",
+                        "cm:taggable",
+                        "dp:restrictable",
+                        "fm:commentsRollup",
+                        "qshare:shared",
+
+                        "exif:exif",
+                        "cm:effectivity",
+
+                        "cm:emailed",
+                        "cm:likesRatingSchemeRollups",
+                        "cm:lockable",
+                        "cm:ownable"
+                    ]
+                },
+                {
+                    "title": "APP.CONTENT_METADATA.EXIF_GROUP_TITLE",
+                    "items": [
+                        {
+                            "aspect": "exif:exif",
+                            "properties": [
+                                "exif:pixelXDimension",
+                                "exif:pixelYDimension",
+                                "exif:dateTimeOriginal",
+                                "exif:exposureTime",
+                                "exif:fNumber",
+                                "exif:flash",
+                                "exif:focalLength",
+                                "exif:isoSpeedRatings",
+                                "exif:orientation",
+                                "exif:manufacturer",
+                                "exif:model",
+                                "exif:software"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "APP.CONTENT_METADATA.EFFECTIVITY_GROUP_TITLE",
+                    "items": [
+                        {
+                            "aspect": "cm:effectivity",
+                            "properties": ["cm:from", "cm:to"]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

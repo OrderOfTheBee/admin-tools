@@ -1,0 +1,18 @@
+{
+    "$id": "app.contezza-admin-tools.manuals",
+    "$version": "@@project.version@@",
+    "$name": "Contezza Admin Tools App Manuals",
+    "$vendor": "Contezza BV",
+
+    "features": {
+        "manuals": [
+            {
+                "name": "Contezza Admin Tools App",
+                "fileName": "contezza-admin-tools.pdf",
+                "description": "Handleiding Tezza demo omgeving m.b.t. sites, rechten en rollen.",
+                "downloadLink": "./assets/docs/app-contezza-admin-tools.pdf",
+                "browserLink": "./assets/docs/app-contezza-admin-tools.html"
+            }
+        ]
+    }
+}

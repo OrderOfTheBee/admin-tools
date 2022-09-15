@@ -1,0 +1,28 @@
+{
+    "$id": "app.contezza-admin-tools.header",
+    "$version": "@@project.version@@",
+    "$name": "Contezza Admin Tools App Header",
+    "$vendor": "Contezza BV",
+
+    "features": {
+        "header": [
+            {
+                "id": "app.header.more",
+                "children": [
+                    {
+                        "id": "app.header.settings",
+                        "rules": {
+                            "visible": "false"
+                        }
+                    },
+                    {
+                        "id": "app.header.about",
+                        "rules": {
+                            "visible": "false"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
